@@ -11,9 +11,10 @@ class BiteFish extends Fish {
     let surroundingFish = this.tank.getProximateDenizens(this.position,60);
     for (const fish of surroundingFish) {
       if (fish.constructor.name !== 'BiteFish' && fish.constructor.name !== 'Starter') {
-        fish.kill();
+        fish.imageUri = '/images/blood.png';
+        // fish.kill();
       }
     }
   }
-    
+
 }
